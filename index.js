@@ -7,6 +7,10 @@ window.addEventListener('DOMContentLoaded', function() {
 		    // Create a basic BJS Scene object.
 		   	var scene = new BABYLON.Scene(engine);
 
+		   	//Adding an Arc Rotate Camera
+    		var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0.8, 100, BABYLON.Vector3.Zero(), scene);
+    		camera.attachControl(canvas, false);
+
 		    var assetsManager = new BABYLON.AssetsManager(scene);
 			var meshTask = assetsManager.addMeshTask("Darwin task", "", "../", "Darwin.glb");
 			
