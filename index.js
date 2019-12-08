@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		   	var scene = new BABYLON.Scene(engine);
 
 		    var assetsManager = new BABYLON.AssetsManager(scene);
-			var meshTask = assetsManager.addMeshTask("Darwin task", "", "../babylonJSTask/", "Darwin.glb");
+			var meshTask = assetsManager.addMeshTask("Darwin task", "", "../", "Darwin.glb");
 			
 			meshTask.onSuccess = function (task) {
 			    task.loadedMeshes[0].position = BABYLON.Vector3.Zero();
